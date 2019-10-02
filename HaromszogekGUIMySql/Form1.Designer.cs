@@ -51,6 +51,7 @@
             this.errorProviderB = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderC = new System.Windows.Forms.ErrorProvider(this.components);
             this.buttonUresAdatbazisLetrehozasa = new System.Windows.Forms.Button();
+            this.buttonAdatbazisbaUresTablaLetrehozasa = new System.Windows.Forms.Button();
             this.groupBoxHaromszogAdatok.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderB)).BeginInit();
@@ -246,11 +247,22 @@
             this.buttonUresAdatbazisLetrehozasa.UseVisualStyleBackColor = true;
             this.buttonUresAdatbazisLetrehozasa.Click += new System.EventHandler(this.buttonUresAdatbazisLetrehozasa_Click);
             // 
+            // buttonAdatbazisbaUresTablaLetrehozasa
+            // 
+            this.buttonAdatbazisbaUresTablaLetrehozasa.Location = new System.Drawing.Point(683, 42);
+            this.buttonAdatbazisbaUresTablaLetrehozasa.Name = "buttonAdatbazisbaUresTablaLetrehozasa";
+            this.buttonAdatbazisbaUresTablaLetrehozasa.Size = new System.Drawing.Size(285, 23);
+            this.buttonAdatbazisbaUresTablaLetrehozasa.TabIndex = 17;
+            this.buttonAdatbazisbaUresTablaLetrehozasa.Text = "Adatbázisba üres tábla létrehozása";
+            this.buttonAdatbazisbaUresTablaLetrehozasa.UseVisualStyleBackColor = true;
+            this.buttonAdatbazisbaUresTablaLetrehozasa.Click += new System.EventHandler(this.buttonAdatbazisbaUresTablaLetrehozasa_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1010, 450);
+            this.Controls.Add(this.buttonAdatbazisbaUresTablaLetrehozasa);
             this.Controls.Add(this.buttonUresAdatbazisLetrehozasa);
             this.Controls.Add(this.listBoxHaromszogek);
             this.Controls.Add(this.buttonMentSzerkeszthetok);
@@ -297,6 +309,7 @@
         private System.Windows.Forms.ErrorProvider errorProviderB;
         private System.Windows.Forms.ErrorProvider errorProviderC;
         private System.Windows.Forms.Button buttonUresAdatbazisLetrehozasa;
+        private System.Windows.Forms.Button buttonAdatbazisbaUresTablaLetrehozasa;
     }
 }
 

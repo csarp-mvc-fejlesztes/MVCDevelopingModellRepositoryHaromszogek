@@ -54,5 +54,35 @@ namespace HaromszogekGUI.Tarolo
                 Debug.WriteLine(e.Message);
             }
         }
+
+        public void createTable()
+        {
+            try
+            {
+                MySqlConnection connection = new MySqlConnection(connectionString);
+                connection.Open();
+
+
+                string query = "CREATE TABLE `haromszogek` (" +
+                           " `id` int(11) NOT NULL," +
+                           " `aoldal` int(11) NOT NULL," +
+                           " `boldal` int(11) NOT NULL," +
+                           " `coldal` int(11) NOT NULL " +
+                       " ) ENGINE = InnoDB DEFAULT CHARSET = utf8 COLLATE = utf8_hungarian_ci; "; 
+                       
+                MySqlCommand cmdCreate = new MySqlCommand(query, connection);
+                cmdCreate.ExecuteNonQuery();
+
+                query=" ALTER TABLE `haromszogek`  ADD PRIMARY KEY(`id`); ";
+                cmdCreate = new MySqlCommand(query, connection);
+                cmdCreate.ExecuteNonQuery();
+
+                connection.Close();
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e.Message);
+            }
+        }
     }
 }

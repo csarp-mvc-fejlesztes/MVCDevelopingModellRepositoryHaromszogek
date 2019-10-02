@@ -44,14 +44,14 @@ namespace HaromszogekGUI
                 Haromszog h = haromszogek.getAdottElem(index);
                 megjelenitHaromszoget(h);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Debug.WriteLine(ex.Message);
             }
         }
 
         private void megjelenitHaromszoget(Haromszog h)
-        {           
+        {
             textBoxAOldal.Text = h.getA().ToString();
             textBoxBOldal.Text = h.getB().ToString();
             textBoxCOldal.Text = h.getC().ToString();
@@ -68,7 +68,7 @@ namespace HaromszogekGUI
         private void buttonTorol_Click(object sender, EventArgs e)
         {
             int index = listBoxHaromszogek.SelectedIndex;
-            if (index < 0) 
+            if (index < 0)
                 return;
             try
             {
@@ -97,7 +97,7 @@ namespace HaromszogekGUI
             {
                 a = Convert.ToInt32(textBoxAOldal.Text);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 errorProviderA.SetError(textBoxAOldal, "Hibás adat!");
                 vanHiba = true;
@@ -116,7 +116,7 @@ namespace HaromszogekGUI
             try
             {
                 c = Convert.ToInt32(textBoxCOldal.Text);
-                
+
             }
             catch (Exception ex)
             {
@@ -181,14 +181,13 @@ namespace HaromszogekGUI
                 //Lekérjük a módosítandó elem ID-jét 
                 int id = modositando.getId();
                 //Létrehozzuk a háromszöget
-                Haromszog h = new Haromszog(a, b, c);                
+                Haromszog h = new Haromszog(a, b, c);
                 //A repositoryban az adott id-vel rendelekező háromszoget módosítjuk az új h háromszögre
                 haromszogek.modositHaromszoget(id, h);
                 //Frissítjük a ListBox-ot az új adatokkal
                 megjelenitHaromszogeketListboxban();
             }
+
         }
-
-
     }
 }

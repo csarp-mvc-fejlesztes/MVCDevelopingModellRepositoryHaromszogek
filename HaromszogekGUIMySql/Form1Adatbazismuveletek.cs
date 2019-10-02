@@ -23,5 +23,10 @@ namespace HaromszogekGUI
         {
             ham.initializeEmptyDatabase();
         }
+
+        private void buttonAdatbazisbaUresTablaLetrehozasa_Click(object sender, EventArgs e)
+        {
+            ham.createTable();
+        }
     }
 }
