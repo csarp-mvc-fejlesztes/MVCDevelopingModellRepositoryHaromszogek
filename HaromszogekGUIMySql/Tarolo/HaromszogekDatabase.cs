@@ -108,7 +108,25 @@ namespace HaromszogekGUI.Tarolo
             {
                 Debug.WriteLine(e.Message);
             }
+        }
 
+        public void add(Haromszog item)
+        {
+            try
+            {
+                MySqlConnection connection = new MySqlConnection(connectionString);
+                connection.Open();
+                string query = item.getMysqlInsertCommand();
+                MySqlCommand cmdInsert = new MySqlCommand(query, connection);
+                cmdInsert.ExecuteNonQuery();
+                connection.Close();
+
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e.Message);
+            }
+            return;
         }
     }
 }

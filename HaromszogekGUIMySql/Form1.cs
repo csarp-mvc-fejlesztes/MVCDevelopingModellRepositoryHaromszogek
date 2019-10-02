@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using HaromszogekGUI.Tarolo;
 using HaromszogekSzoftverfejleszto.Modell;
 using HaromszogekSzoftverfejleszto.Tarolo;
 
@@ -17,11 +18,13 @@ namespace HaromszogekGUI
     {
         //repository (tároló)
         Haromszogek haromszogek;
+        HaromszogekDatabase haromszogekDatabase;
 
         public Form1()
         {
             //repository (tároló) példányosítása
             haromszogek = new Haromszogek();
+            haromszogekDatabase = new HaromszogekDatabase();
             InitializeComponent();
         }
 
@@ -129,6 +132,7 @@ namespace HaromszogekGUI
                 Haromszog h = new Haromszog(a, b, c);
                 //A létrehozott háromszöget hozzáadjuk a repository-hoz
                 haromszogek.hozzaadHaromszoget(h);
+                haromszogekDatabase.add(h);
                 //Megjelenítjük az új háromszöggel a háromszögeket a Listboxban
                 megjelenitHaromszogeketListboxban();
             }
