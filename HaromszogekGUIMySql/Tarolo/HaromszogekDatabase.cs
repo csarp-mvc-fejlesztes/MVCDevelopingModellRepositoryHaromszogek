@@ -54,7 +54,7 @@ namespace HaromszogekGUI.Tarolo
             {
                 Debug.WriteLine(e.Message);
             }
-        }
+        }        
 
         public void createTable()
         {
@@ -155,6 +155,25 @@ namespace HaromszogekGUI.Tarolo
                 MySqlConnection connection = new MySqlConnection(connectionString);
                 connection.Open();
                 string query = h.getMysqlUpdateCommand(id);
+                MySqlCommand cmdUpdate = new MySqlCommand(query, connection);
+                cmdUpdate.ExecuteNonQuery();
+                connection.Close();
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e.Message);
+            }
+            return;
+
+        }
+
+        public void removeAllDataFromDatabase()
+        {
+            try
+            {
+                MySqlConnection connection = new MySqlConnection(connectionString);
+                connection.Open();
+                string query = Haromszog.getMysqlDeleteAllCommand();
                 MySqlCommand cmdUpdate = new MySqlCommand(query, connection);
                 cmdUpdate.ExecuteNonQuery();
                 connection.Close();

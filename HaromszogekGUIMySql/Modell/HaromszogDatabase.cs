@@ -36,5 +36,10 @@ namespace HaromszogekSzoftverfejleszto.Modell
                 getC() +
                 "' WHERE `haromszogek`.`id` = " + id;
         }
+
+        public  static string getMysqlDeleteAllCommand()
+        {
+            return  "DELETE FROM haromszogek";
+        }
     }
 }

@@ -33,5 +33,12 @@ namespace HaromszogekGUI
         {
             ham.saveDataToDatabase(haromszogek.getHaromszogek());
         }
+
+        private void buttonOsszesAdatTorlese_Click(object sender, EventArgs e)
+        {
+            ham.removeAllDataFromDatabase();
+            haromszogek.torolOsszesAdat();
+            listBoxHaromszogek.DataSource = null;
+        }
     }
 }

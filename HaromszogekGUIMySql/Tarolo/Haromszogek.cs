@@ -153,5 +153,10 @@ namespace HaromszogekSzoftverfejleszto.Tarolo
                 throw new TaroloException(id + ". háromszög nem létezik!");
             }
         }
+
+        public void torolOsszesAdat()
+        {
+            haromszogek.Clear();
+        }
     }
 }
