@@ -52,6 +52,7 @@
             this.errorProviderC = new System.Windows.Forms.ErrorProvider(this.components);
             this.buttonUresAdatbazisLetrehozasa = new System.Windows.Forms.Button();
             this.buttonAdatbazisbaUresTablaLetrehozasa = new System.Windows.Forms.Button();
+            this.buttonMentAdatokatAdatbazisba = new System.Windows.Forms.Button();
             this.groupBoxHaromszogAdatok.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderB)).BeginInit();
@@ -257,11 +258,22 @@
             this.buttonAdatbazisbaUresTablaLetrehozasa.UseVisualStyleBackColor = true;
             this.buttonAdatbazisbaUresTablaLetrehozasa.Click += new System.EventHandler(this.buttonAdatbazisbaUresTablaLetrehozasa_Click);
             // 
+            // buttonMentAdatokatAdatbazisba
+            // 
+            this.buttonMentAdatokatAdatbazisba.Location = new System.Drawing.Point(683, 80);
+            this.buttonMentAdatokatAdatbazisba.Name = "buttonMentAdatokatAdatbazisba";
+            this.buttonMentAdatokatAdatbazisba.Size = new System.Drawing.Size(285, 23);
+            this.buttonMentAdatokatAdatbazisba.TabIndex = 18;
+            this.buttonMentAdatokatAdatbazisba.Text = "Ment adatokat adatbázisba";
+            this.buttonMentAdatokatAdatbazisba.UseVisualStyleBackColor = true;
+            this.buttonMentAdatokatAdatbazisba.Click += new System.EventHandler(this.buttonMentAdatokatAdatbazisba_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1010, 450);
+            this.Controls.Add(this.buttonMentAdatokatAdatbazisba);
             this.Controls.Add(this.buttonAdatbazisbaUresTablaLetrehozasa);
             this.Controls.Add(this.buttonUresAdatbazisLetrehozasa);
             this.Controls.Add(this.listBoxHaromszogek);
@@ -310,6 +322,7 @@
         private System.Windows.Forms.ErrorProvider errorProviderC;
         private System.Windows.Forms.Button buttonUresAdatbazisLetrehozasa;
         private System.Windows.Forms.Button buttonAdatbazisbaUresTablaLetrehozasa;
+        private System.Windows.Forms.Button buttonMentAdatokatAdatbazisba;
     }
 }
 

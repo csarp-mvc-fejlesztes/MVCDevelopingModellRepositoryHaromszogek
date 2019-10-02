@@ -189,5 +189,7 @@ namespace HaromszogekGUI
             }
 
         }
+
+
     }
 }

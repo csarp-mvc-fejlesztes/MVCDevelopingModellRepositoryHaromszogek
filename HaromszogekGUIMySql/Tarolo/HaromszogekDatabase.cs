@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using System.Diagnostics;
 using MySql.Data.MySqlClient;
+using HaromszogekSzoftverfejleszto.Modell;
 
 namespace HaromszogekGUI.Tarolo
 {
@@ -83,6 +84,31 @@ namespace HaromszogekGUI.Tarolo
             {
                 Debug.WriteLine(e.Message);
             }
+        }
+
+        public void saveDataToDatabase(List<Haromszog> haromszogek)
+        {
+            try
+            {
+                MySqlConnection connection = new MySqlConnection(connectionString);
+                connection.Open();
+
+                string query = "";
+                MySqlCommand cmdCreate = new MySqlCommand(query, connection);
+              
+                foreach (Haromszog h in haromszogek)
+                {
+                    query = h.getMysqlInsertCommand();
+                    MySqlCommand cmdInsert = new MySqlCommand(query, connection);
+                    cmdInsert.ExecuteNonQuery();
+                }
+                connection.Close();
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e.Message);
+            }
+
         }
     }
 }

@@ -28,5 +28,10 @@ namespace HaromszogekGUI
         {
             ham.createTable();
         }
+
+        private void buttonMentAdatokatAdatbazisba_Click(object sender, EventArgs e)
+        {
+            ham.saveDataToDatabase(haromszogek.getHaromszogek());
+        }
     }
 }

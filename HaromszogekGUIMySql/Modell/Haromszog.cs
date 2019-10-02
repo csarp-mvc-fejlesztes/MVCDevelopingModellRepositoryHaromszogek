@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HaromszogekSzoftverfejleszto.Modell
 {
-    class Haromszog
+    partial class Haromszog
     {
         private int id;
         private int a;
