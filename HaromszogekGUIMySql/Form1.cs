@@ -189,6 +189,7 @@ namespace HaromszogekGUI
                 Haromszog h = new Haromszog(a, b, c);
                 //A repositoryban az adott id-vel rendelekező háromszoget módosítjuk az új h háromszögre
                 haromszogek.modositHaromszoget(id, h);
+                haromszogekDatabase.updateDatabase(id, h);
                 //Frissítjük a ListBox-ot az új adatokkal
                 megjelenitHaromszogeketListboxban();
             }

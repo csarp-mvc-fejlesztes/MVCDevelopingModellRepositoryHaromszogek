@@ -26,5 +26,15 @@ namespace HaromszogekSzoftverfejleszto.Modell
             return "DELETE FROM haromszogek WHERE id=\"" + id + "\"";
         }
 
+        public string getMysqlUpdateCommand(int id)
+        {
+            return "UPDATE `haromszogek` SET `aoldal` = '" +
+                 getA() +
+                "', `boldal` = '" +
+                getB() +
+                "', `coldal` = '" +
+                getC() +
+                "' WHERE `haromszogek`.`id` = " + id;
+        }
     }
 }

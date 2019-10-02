@@ -147,5 +147,24 @@ namespace HaromszogekGUI.Tarolo
             return;
 
         }
+
+        public void updateDatabase(int id, Haromszog h)
+        {
+            try
+            {
+                MySqlConnection connection = new MySqlConnection(connectionString);
+                connection.Open();
+                string query = h.getMysqlUpdateCommand(id);
+                MySqlCommand cmdUpdate = new MySqlCommand(query, connection);
+                cmdUpdate.ExecuteNonQuery();
+                connection.Close();
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e.Message);
+            }
+            return;
+
+        }
     }
 }
