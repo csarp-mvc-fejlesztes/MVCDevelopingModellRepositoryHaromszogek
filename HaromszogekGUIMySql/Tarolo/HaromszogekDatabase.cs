@@ -54,7 +54,7 @@ namespace HaromszogekGUI.Tarolo
             {
                 Debug.WriteLine(e.Message);
             }
-        }        
+        }
 
         public void createTable()
         {
@@ -183,6 +183,23 @@ namespace HaromszogekGUI.Tarolo
                 Debug.WriteLine(e.Message);
             }
             return;
+        }
+
+        public void removeTable()
+        {
+            try
+            {
+                MySqlConnection connection = new MySqlConnection(connectionString);
+                connection.Open();
+                string query = "DROP TABLE haromszogek;";
+                MySqlCommand cmdDeleteTAble = new MySqlCommand(query, connection);
+                cmdDeleteTAble.ExecuteNonQuery();
+                connection.Close();
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e.Message);
+            }
 
         }
     }

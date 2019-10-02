@@ -40,5 +40,10 @@ namespace HaromszogekGUI
             haromszogek.torolOsszesAdat();
             listBoxHaromszogek.DataSource = null;
         }
+
+        private void buttonTablaTorlese_Click(object sender, EventArgs e)
+        {
+            ham.removeTable();
+        }
     }
 }

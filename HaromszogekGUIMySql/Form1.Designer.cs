@@ -54,6 +54,7 @@
             this.buttonAdatbazisbaUresTablaLetrehozasa = new System.Windows.Forms.Button();
             this.buttonMentAdatokatAdatbazisba = new System.Windows.Forms.Button();
             this.buttonOsszesAdatTorlese = new System.Windows.Forms.Button();
+            this.buttonTablaTorlese = new System.Windows.Forms.Button();
             this.groupBoxHaromszogAdatok.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderB)).BeginInit();
@@ -279,11 +280,22 @@
             this.buttonOsszesAdatTorlese.UseVisualStyleBackColor = true;
             this.buttonOsszesAdatTorlese.Click += new System.EventHandler(this.buttonOsszesAdatTorlese_Click);
             // 
+            // buttonTablaTorlese
+            // 
+            this.buttonTablaTorlese.Location = new System.Drawing.Point(683, 176);
+            this.buttonTablaTorlese.Name = "buttonTablaTorlese";
+            this.buttonTablaTorlese.Size = new System.Drawing.Size(285, 23);
+            this.buttonTablaTorlese.TabIndex = 20;
+            this.buttonTablaTorlese.Text = "Tábla törlése";
+            this.buttonTablaTorlese.UseVisualStyleBackColor = true;
+            this.buttonTablaTorlese.Click += new System.EventHandler(this.buttonTablaTorlese_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1010, 450);
+            this.Controls.Add(this.buttonTablaTorlese);
             this.Controls.Add(this.buttonOsszesAdatTorlese);
             this.Controls.Add(this.buttonMentAdatokatAdatbazisba);
             this.Controls.Add(this.buttonAdatbazisbaUresTablaLetrehozasa);
@@ -336,6 +348,7 @@
         private System.Windows.Forms.Button buttonAdatbazisbaUresTablaLetrehozasa;
         private System.Windows.Forms.Button buttonMentAdatokatAdatbazisba;
         private System.Windows.Forms.Button buttonOsszesAdatTorlese;
+        private System.Windows.Forms.Button buttonTablaTorlese;
     }
 }
 
