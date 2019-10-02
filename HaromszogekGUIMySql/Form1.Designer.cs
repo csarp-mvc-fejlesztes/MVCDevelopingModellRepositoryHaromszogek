@@ -50,6 +50,7 @@
             this.errorProviderA = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderB = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderC = new System.Windows.Forms.ErrorProvider(this.components);
+            this.buttonUresAdatbazisLetrehozasa = new System.Windows.Forms.Button();
             this.groupBoxHaromszogAdatok.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderB)).BeginInit();
@@ -235,11 +236,22 @@
             // 
             this.errorProviderC.ContainerControl = this;
             // 
+            // buttonUresAdatbazisLetrehozasa
+            // 
+            this.buttonUresAdatbazisLetrehozasa.Location = new System.Drawing.Point(683, 13);
+            this.buttonUresAdatbazisLetrehozasa.Name = "buttonUresAdatbazisLetrehozasa";
+            this.buttonUresAdatbazisLetrehozasa.Size = new System.Drawing.Size(285, 23);
+            this.buttonUresAdatbazisLetrehozasa.TabIndex = 16;
+            this.buttonUresAdatbazisLetrehozasa.Text = "Üres adatbázis létrehozása";
+            this.buttonUresAdatbazisLetrehozasa.UseVisualStyleBackColor = true;
+            this.buttonUresAdatbazisLetrehozasa.Click += new System.EventHandler(this.buttonUresAdatbazisLetrehozasa_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1010, 450);
+            this.Controls.Add(this.buttonUresAdatbazisLetrehozasa);
             this.Controls.Add(this.listBoxHaromszogek);
             this.Controls.Add(this.buttonMentSzerkeszthetok);
             this.Controls.Add(this.textBoxSzerkeszthetokOsszkerulete);
@@ -284,6 +296,7 @@
         private System.Windows.Forms.ErrorProvider errorProviderA;
         private System.Windows.Forms.ErrorProvider errorProviderB;
         private System.Windows.Forms.ErrorProvider errorProviderC;
+        private System.Windows.Forms.Button buttonUresAdatbazisLetrehozasa;
     }
 }
 
