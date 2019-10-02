@@ -45,5 +45,10 @@ namespace HaromszogekGUI
         {
             ham.removeTable();
         }
+
+        private void buttonAdatbazisTorlese_Click(object sender, EventArgs e)
+        {
+            ham.removeDatabase();
+        }
     }
 }

@@ -200,6 +200,23 @@ namespace HaromszogekGUI.Tarolo
             {
                 Debug.WriteLine(e.Message);
             }
+        }
+
+        public void removeDatabase()
+        {
+            try
+            {
+                MySqlConnection connection = new MySqlConnection(connectionString);
+                connection.Open();
+                string query = "DROP DATABASE haromszogek;";
+                MySqlCommand cmdDeleteDatabase = new MySqlCommand(query, connection);
+                cmdDeleteDatabase.ExecuteNonQuery();
+                connection.Close();
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e.Message);
+            }
 
         }
     }
