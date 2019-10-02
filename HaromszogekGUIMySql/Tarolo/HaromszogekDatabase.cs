@@ -128,5 +128,24 @@ namespace HaromszogekGUI.Tarolo
             }
             return;
         }
+
+        public void removeFromDatabase(int id)
+        {
+            try
+            {
+                MySqlConnection connection = new MySqlConnection(connectionString);
+                connection.Open();
+                string query = Haromszog.getMysqlDeleteCommand(id);
+                MySqlCommand cmdDelete = new MySqlCommand(query, connection);
+                cmdDelete.ExecuteNonQuery();
+                connection.Close();
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e.Message);
+            }
+            return;
+
+        }
     }
 }

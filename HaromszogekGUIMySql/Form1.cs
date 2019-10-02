@@ -80,6 +80,7 @@ namespace HaromszogekGUI
                 //id-jét megkeressük, töröljük
                 int id = h.getId();
                 haromszogek.torolIdAlapjan(id);
+                haromszogekDatabase.removeFromDatabase(id);
                 //majd frissítjük a ListBox-ot
                 megjelenitHaromszogeketListboxban();
             }

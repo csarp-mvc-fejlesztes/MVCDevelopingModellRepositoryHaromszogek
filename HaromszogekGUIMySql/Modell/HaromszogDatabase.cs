@@ -20,7 +20,11 @@ namespace HaromszogekSzoftverfejleszto.Modell
                 getC() +
                 "');";
         }
-        
+
+        static public string getMysqlDeleteCommand(int id)
+        {
+            return "DELETE FROM haromszogek WHERE id=\"" + id + "\"";
+        }
 
     }
 }
