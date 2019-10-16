@@ -44,7 +44,7 @@ namespace HaromszogekSzoftverfejleszto.Tarolo
         {
             try
             {
-                StreamReader sr = new StreamReader("01haromszogek.txt");
+                StreamReader sr = new StreamReader("../../01haromszogek.txt");
                 while (!sr.EndOfStream)
                 {
                     string line = sr.ReadLine();
