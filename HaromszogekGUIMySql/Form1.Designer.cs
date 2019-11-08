@@ -56,10 +56,22 @@
             this.buttonOsszesAdatTorlese = new System.Windows.Forms.Button();
             this.buttonTablaTorlese = new System.Windows.Forms.Button();
             this.buttonAdatbazisTorlese = new System.Windows.Forms.Button();
+            this.errorProviderAdatbazisLetrehozas = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderAdatbazisTorles = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderTablaLetrehozas = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderTablaTorles = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderMentAdatokAdatbazisba = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderOsszesAdatTorlese = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBoxHaromszogAdatok.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderC)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderAdatbazisLetrehozas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderAdatbazisTorles)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderTablaLetrehozas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderTablaTorles)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderMentAdatokAdatbazisba)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderOsszesAdatTorlese)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonBeolvas
@@ -243,69 +255,93 @@
             // 
             // buttonUresAdatbazisLetrehozasa
             // 
-            this.buttonUresAdatbazisLetrehozasa.Location = new System.Drawing.Point(683, 13);
+            this.buttonUresAdatbazisLetrehozasa.Location = new System.Drawing.Point(715, 13);
             this.buttonUresAdatbazisLetrehozasa.Name = "buttonUresAdatbazisLetrehozasa";
             this.buttonUresAdatbazisLetrehozasa.Size = new System.Drawing.Size(285, 23);
-            this.buttonUresAdatbazisLetrehozasa.TabIndex = 16;
+            this.buttonUresAdatbazisLetrehozasa.TabIndex = 17;
             this.buttonUresAdatbazisLetrehozasa.Text = "Üres adatbázis létrehozása";
             this.buttonUresAdatbazisLetrehozasa.UseVisualStyleBackColor = true;
             this.buttonUresAdatbazisLetrehozasa.Click += new System.EventHandler(this.buttonUresAdatbazisLetrehozasa_Click);
             // 
             // buttonAdatbazisbaUresTablaLetrehozasa
             // 
-            this.buttonAdatbazisbaUresTablaLetrehozasa.Location = new System.Drawing.Point(683, 42);
+            this.buttonAdatbazisbaUresTablaLetrehozasa.Location = new System.Drawing.Point(715, 42);
             this.buttonAdatbazisbaUresTablaLetrehozasa.Name = "buttonAdatbazisbaUresTablaLetrehozasa";
             this.buttonAdatbazisbaUresTablaLetrehozasa.Size = new System.Drawing.Size(285, 23);
-            this.buttonAdatbazisbaUresTablaLetrehozasa.TabIndex = 17;
+            this.buttonAdatbazisbaUresTablaLetrehozasa.TabIndex = 18;
             this.buttonAdatbazisbaUresTablaLetrehozasa.Text = "Adatbázisba üres tábla létrehozása";
             this.buttonAdatbazisbaUresTablaLetrehozasa.UseVisualStyleBackColor = true;
             this.buttonAdatbazisbaUresTablaLetrehozasa.Click += new System.EventHandler(this.buttonAdatbazisbaUresTablaLetrehozasa_Click);
             // 
             // buttonMentAdatokatAdatbazisba
             // 
-            this.buttonMentAdatokatAdatbazisba.Location = new System.Drawing.Point(683, 80);
+            this.buttonMentAdatokatAdatbazisba.Location = new System.Drawing.Point(715, 71);
             this.buttonMentAdatokatAdatbazisba.Name = "buttonMentAdatokatAdatbazisba";
             this.buttonMentAdatokatAdatbazisba.Size = new System.Drawing.Size(285, 23);
-            this.buttonMentAdatokatAdatbazisba.TabIndex = 18;
+            this.buttonMentAdatokatAdatbazisba.TabIndex = 19;
             this.buttonMentAdatokatAdatbazisba.Text = "Ment adatokat adatbázisba";
             this.buttonMentAdatokatAdatbazisba.UseVisualStyleBackColor = true;
             this.buttonMentAdatokatAdatbazisba.Click += new System.EventHandler(this.buttonMentAdatokatAdatbazisba_Click);
             // 
             // buttonOsszesAdatTorlese
             // 
-            this.buttonOsszesAdatTorlese.Location = new System.Drawing.Point(683, 147);
+            this.buttonOsszesAdatTorlese.Location = new System.Drawing.Point(715, 147);
             this.buttonOsszesAdatTorlese.Name = "buttonOsszesAdatTorlese";
             this.buttonOsszesAdatTorlese.Size = new System.Drawing.Size(285, 23);
-            this.buttonOsszesAdatTorlese.TabIndex = 19;
+            this.buttonOsszesAdatTorlese.TabIndex = 20;
             this.buttonOsszesAdatTorlese.Text = "Összes adat törlése";
             this.buttonOsszesAdatTorlese.UseVisualStyleBackColor = true;
             this.buttonOsszesAdatTorlese.Click += new System.EventHandler(this.buttonOsszesAdatTorlese_Click);
             // 
             // buttonTablaTorlese
             // 
-            this.buttonTablaTorlese.Location = new System.Drawing.Point(683, 176);
+            this.buttonTablaTorlese.Location = new System.Drawing.Point(715, 176);
             this.buttonTablaTorlese.Name = "buttonTablaTorlese";
             this.buttonTablaTorlese.Size = new System.Drawing.Size(285, 23);
-            this.buttonTablaTorlese.TabIndex = 20;
+            this.buttonTablaTorlese.TabIndex = 21;
             this.buttonTablaTorlese.Text = "Tábla törlése";
             this.buttonTablaTorlese.UseVisualStyleBackColor = true;
             this.buttonTablaTorlese.Click += new System.EventHandler(this.buttonTablaTorlese_Click);
             // 
             // buttonAdatbazisTorlese
             // 
-            this.buttonAdatbazisTorlese.Location = new System.Drawing.Point(683, 205);
+            this.buttonAdatbazisTorlese.Location = new System.Drawing.Point(715, 205);
             this.buttonAdatbazisTorlese.Name = "buttonAdatbazisTorlese";
             this.buttonAdatbazisTorlese.Size = new System.Drawing.Size(285, 23);
-            this.buttonAdatbazisTorlese.TabIndex = 21;
+            this.buttonAdatbazisTorlese.TabIndex = 22;
             this.buttonAdatbazisTorlese.Text = "Adatbázis törlése";
             this.buttonAdatbazisTorlese.UseVisualStyleBackColor = true;
             this.buttonAdatbazisTorlese.Click += new System.EventHandler(this.buttonAdatbazisTorlese_Click);
+            // 
+            // errorProviderAdatbazisLetrehozas
+            // 
+            this.errorProviderAdatbazisLetrehozas.ContainerControl = this;
+            // 
+            // errorProviderAdatbazisTorles
+            // 
+            this.errorProviderAdatbazisTorles.ContainerControl = this;
+            // 
+            // errorProviderTablaLetrehozas
+            // 
+            this.errorProviderTablaLetrehozas.ContainerControl = this;
+            // 
+            // errorProviderTablaTorles
+            // 
+            this.errorProviderTablaTorles.ContainerControl = this;
+            // 
+            // errorProviderMentAdatokAdatbazisba
+            // 
+            this.errorProviderMentAdatokAdatbazisba.ContainerControl = this;
+            // 
+            // errorProviderOsszesAdatTorlese
+            // 
+            this.errorProviderOsszesAdatTorlese.ContainerControl = this;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1010, 450);
+            this.ClientSize = new System.Drawing.Size(1063, 450);
             this.Controls.Add(this.buttonAdatbazisTorlese);
             this.Controls.Add(this.buttonTablaTorlese);
             this.Controls.Add(this.buttonOsszesAdatTorlese);
@@ -328,6 +364,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderA)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderC)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderAdatbazisLetrehozas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderAdatbazisTorles)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderTablaLetrehozas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderTablaTorles)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderMentAdatokAdatbazisba)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderOsszesAdatTorlese)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -356,12 +398,18 @@
         private System.Windows.Forms.ErrorProvider errorProviderA;
         private System.Windows.Forms.ErrorProvider errorProviderB;
         private System.Windows.Forms.ErrorProvider errorProviderC;
-        private System.Windows.Forms.Button buttonUresAdatbazisLetrehozasa;
-        private System.Windows.Forms.Button buttonAdatbazisbaUresTablaLetrehozasa;
-        private System.Windows.Forms.Button buttonMentAdatokatAdatbazisba;
-        private System.Windows.Forms.Button buttonOsszesAdatTorlese;
-        private System.Windows.Forms.Button buttonTablaTorlese;
         private System.Windows.Forms.Button buttonAdatbazisTorlese;
+        private System.Windows.Forms.Button buttonTablaTorlese;
+        private System.Windows.Forms.Button buttonOsszesAdatTorlese;
+        private System.Windows.Forms.Button buttonMentAdatokatAdatbazisba;
+        private System.Windows.Forms.Button buttonAdatbazisbaUresTablaLetrehozasa;
+        private System.Windows.Forms.Button buttonUresAdatbazisLetrehozasa;
+        private System.Windows.Forms.ErrorProvider errorProviderAdatbazisLetrehozas;
+        private System.Windows.Forms.ErrorProvider errorProviderAdatbazisTorles;
+        private System.Windows.Forms.ErrorProvider errorProviderTablaLetrehozas;
+        private System.Windows.Forms.ErrorProvider errorProviderTablaTorles;
+        private System.Windows.Forms.ErrorProvider errorProviderMentAdatokAdatbazisba;
+        private System.Windows.Forms.ErrorProvider errorProviderOsszesAdatTorlese;
     }
 }
 

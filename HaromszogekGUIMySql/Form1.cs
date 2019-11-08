@@ -8,9 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using HaromszogekGUI.Tarolo;
 using HaromszogekSzoftverfejleszto.Modell;
 using HaromszogekSzoftverfejleszto.Tarolo;
+using HaromszogekGUI.Tarolo;
 
 namespace HaromszogekGUI
 {
@@ -18,13 +18,15 @@ namespace HaromszogekGUI
     {
         //repository (tároló)
         Haromszogek haromszogek;
-        HaromszogekDatabase haromszogekDatabase;
+        //adatbázis műveletek
+        HaromszogekAdatbazis hadatbazis;
 
         public Form1()
         {
             //repository (tároló) példányosítása
             haromszogek = new Haromszogek();
-            haromszogekDatabase = new HaromszogekDatabase();
+            //adatbázis példányosítása
+            hadatbazis = new HaromszogekAdatbazis();
             InitializeComponent();
         }
 
@@ -47,14 +49,14 @@ namespace HaromszogekGUI
                 Haromszog h = haromszogek.getAdottElem(index);
                 megjelenitHaromszoget(h);
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 Debug.WriteLine(ex.Message);
             }
         }
 
         private void megjelenitHaromszoget(Haromszog h)
-        {
+        {           
             textBoxAOldal.Text = h.getA().ToString();
             textBoxBOldal.Text = h.getB().ToString();
             textBoxCOldal.Text = h.getC().ToString();
@@ -71,7 +73,7 @@ namespace HaromszogekGUI
         private void buttonTorol_Click(object sender, EventArgs e)
         {
             int index = listBoxHaromszogek.SelectedIndex;
-            if (index < 0)
+            if (index < 0) 
                 return;
             try
             {
@@ -80,7 +82,7 @@ namespace HaromszogekGUI
                 //id-jét megkeressük, töröljük
                 int id = h.getId();
                 haromszogek.torolIdAlapjan(id);
-                haromszogekDatabase.removeFromDatabase(id);
+                hadatbazis.torolIdAlapjan(id);
                 //majd frissítjük a ListBox-ot
                 megjelenitHaromszogeketListboxban();
             }
@@ -101,7 +103,7 @@ namespace HaromszogekGUI
             {
                 a = Convert.ToInt32(textBoxAOldal.Text);
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 errorProviderA.SetError(textBoxAOldal, "Hibás adat!");
                 vanHiba = true;
@@ -120,7 +122,7 @@ namespace HaromszogekGUI
             try
             {
                 c = Convert.ToInt32(textBoxCOldal.Text);
-
+                
             }
             catch (Exception ex)
             {
@@ -133,7 +135,8 @@ namespace HaromszogekGUI
                 Haromszog h = new Haromszog(a, b, c);
                 //A létrehozott háromszöget hozzáadjuk a repository-hoz
                 haromszogek.hozzaadHaromszoget(h);
-                haromszogekDatabase.add(h);
+                //A létrehozott háromszöget hozzáadjuk az adatbázishoz
+                hadatbazis.hozzadHaromszoget(h);
                 //Megjelenítjük az új háromszöggel a háromszögeket a Listboxban
                 megjelenitHaromszogeketListboxban();
             }
@@ -186,14 +189,16 @@ namespace HaromszogekGUI
                 //Lekérjük a módosítandó elem ID-jét 
                 int id = modositando.getId();
                 //Létrehozzuk a háromszöget
-                Haromszog h = new Haromszog(a, b, c);
+                Haromszog h = new Haromszog(a, b, c);                
                 //A repositoryban az adott id-vel rendelekező háromszoget módosítjuk az új h háromszögre
                 haromszogek.modositHaromszoget(id, h);
-                haromszogekDatabase.updateDatabase(id, h);
+                //Az adatábzisban az adott id-vel rendelkező háromszöget módosítjuk az új h háromszögre
+                hadatbazis.modositHaromszoget(id, h);
                 //Frissítjük a ListBox-ot az új adatokkal
                 megjelenitHaromszogeketListboxban();
             }
-
         }
+
+        
     }
 }

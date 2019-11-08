@@ -44,7 +44,7 @@ namespace HaromszogekSzoftverfejleszto.Tarolo
         {
             try
             {
-                StreamReader sr = new StreamReader("01haromszogek.txt");
+                StreamReader sr = new StreamReader("../../01haromszogek.txt");
                 while (!sr.EndOfStream)
                 {
                     string line = sr.ReadLine();
@@ -152,11 +152,6 @@ namespace HaromszogekSzoftverfejleszto.Tarolo
             {
                 throw new TaroloException(id + ". háromszög nem létezik!");
             }
-        }
-
-        public void torolOsszesAdat()
-        {
-            haromszogek.Clear();
         }
     }
 }

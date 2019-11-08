@@ -71,6 +71,8 @@ namespace HaromszogekSzoftverfejleszto.Modell
             }
         }
 
+
+
         public bool szerkeszthetoE()
         {
             if ((a + b > c) && (a + c > b) && (b + c > a))
